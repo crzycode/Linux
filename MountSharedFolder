@@ -2,6 +2,14 @@
 sudo mount -t vboxsf Shared /mnt/shared
 
 //using desktop 
+Share the Folder:
+
+Right-click on the folder you want to share and select Properties.
+Go to the Sharing tab.
+Click on Advanced Sharing....
+Check the box that says Share this folder.
+Optionally, click on Permissions to set specific permissions for users or groups accessing the share.
+
 
 sudo apt-get update
 sudo apt-get install cifs-utils
