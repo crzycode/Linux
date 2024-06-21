@@ -1,1 +1,11 @@
+//using virtual box
 sudo mount -t vboxsf Shared /mnt/shared
+
+//using desktop 
+
+sudo apt-get update
+sudo apt-get install cifs-utils
+sudo mkdir -p /mnt/shared
+sudo mount -t cifs //192.168.0.4/d /mnt/shared -o username=kali,password=kali
+
+
