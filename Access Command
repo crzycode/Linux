@@ -1,0 +1,2 @@
+//npm access
+sudo npm install --unsafe-perm=true --allow-root
