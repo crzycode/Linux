@@ -1,0 +1,37 @@
+sudo fallocate -l 4G /swapfile
+If fallocate is not available, you can use dd:
+
+bash
+Copy code
+sudo dd if=/dev/zero of=/swapfile bs=1M count=4096
+Set the Correct Permissions: Change the permissions of the swap file so that only the root user can read and write to it:
+
+bash
+Copy code
+sudo chmod 600 /swapfile
+Mark the File as Swap Space: Set up a Linux swap area on the file:
+
+bash
+Copy code
+sudo mkswap /swapfile
+Enable the Swap File: Turn on the swap file so that the system starts using it:
+
+bash
+Copy code
+sudo swapon /swapfile
+Make the Swap File Permanent: To ensure the swap file is used at every boot, add it to the /etc/fstab file. Open the file in a text editor with root privileges:
+
+bash
+Copy code
+sudo nano /etc/fstab
+Add the following line to the end of the file:
+
+bash
+Copy code
+/swapfile none swap sw 0 0
+Verify the Swap Space: Check that the system is using the new swap file:
+
+bash
+Copy code
+sudo swapon --show
+free -h
