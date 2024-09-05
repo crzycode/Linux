@@ -1,0 +1,27 @@
+//clone
+git clone https://github.com/sitaramc/gitolite
+
+//create directory
+mkdir -p $HOME/bin
+
+//install in directory
+gitolite/install -to $HOME/bin
+
+
+// got to $HOME/bin
+gitolite setup -pk YourName.pub
+
+// or 
+$HOME/bin/gitolite setup -pk YourName.pub
+
+
+
+// clone on admin pc which whome have full access
+git clone git@host:gitolite-admin
+
+// make chages and push
+git add conf
+git add keydir
+git commit -m "added foo, gave access to alice, bob, carol"
+git push
+
