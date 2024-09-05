@@ -7,3 +7,4 @@ bash
 Copy code
 sudo systemctl start ssh
 sudo systemctl enable ssh
+sudo ufw allow ssh
