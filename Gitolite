@@ -7,6 +7,20 @@ mkdir -p $HOME/bin
 //install in directory
 gitolite/install -to $HOME/bin
 
+// add git user 
+sudo adduser git
+
+sudo su - git
+
+mkdir -p ~/.ssh
+touch ~/.ssh/authorized_keys
+
+//Copy your public SSH key to the git user's .ssh/authorized_keys file. For example:
+cat /path/to/your/admin-key.pub >> ~/.ssh/authorized_keys
+
+
+// install on your desire path
+/desired/path/to/install/gitolite setup -pk /path/to/your/admin-key.pub
 
 // got to $HOME/bin
 gitolite setup -pk YourName.pub
