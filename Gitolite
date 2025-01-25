@@ -7,6 +7,10 @@ mkdir -p $HOME/bin
 //install in directory
 gitolite/install -to $HOME/bin
 
+
+//add environment path
+export PATH=$PATH:~/bin
+
 // add git user 
 sudo adduser git
 
